@@ -1,0 +1,188 @@
+<svg width="880" height="340" viewBox="0 0 880 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="880" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#070b16"/>
+      <stop offset="100%" stop-color="#0a1224"/>
+    </linearGradient>
+    <linearGradient id="slide1Grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="slide2Grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#022c22"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="slide3Grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#450a0a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#247bff"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+    </linearGradient>
+    <pattern id="dotPattern2" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#247bff" fill-opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .slide {
+      animation: carouselSlide 12s infinite ease-in-out;
+    }
+    .slide-1 { animation: slide1Anim 12s infinite; }
+    .slide-2 { animation: slide2Anim 12s infinite; }
+    .slide-3 { animation: slide3Anim 12s infinite; }
+
+    @keyframes slide1Anim {
+      0%, 30% { opacity: 1; visibility: visible; }
+      33%, 97% { opacity: 0; visibility: hidden; }
+      100% { opacity: 1; visibility: visible; }
+    }
+    @keyframes slide2Anim {
+      0%, 31% { opacity: 0; visibility: hidden; }
+      34%, 63% { opacity: 1; visibility: visible; }
+      66%, 100% { opacity: 0; visibility: hidden; }
+    }
+    @keyframes slide3Anim {
+      0%, 64% { opacity: 0; visibility: hidden; }
+      67%, 96% { opacity: 1; visibility: visible; }
+      99%, 100% { opacity: 0; visibility: hidden; }
+    }
+
+    .seg-1 { animation: segProgress1 12s linear infinite; }
+    .seg-2 { animation: segProgress2 12s linear infinite; }
+    .seg-3 { animation: segProgress3 12s linear infinite; }
+
+    @keyframes segProgress1 {
+      0% { width: 0px; }
+      30% { width: 120px; }
+      33%, 100% { width: 0px; }
+    }
+    @keyframes segProgress2 {
+      0%, 33% { width: 0px; }
+      34% { width: 0px; }
+      63% { width: 120px; }
+      66%, 100% { width: 0px; }
+    }
+    @keyframes segProgress3 {
+      0%, 66% { width: 0px; }
+      67% { width: 0px; }
+      96% { width: 120px; }
+      99%, 100% { width: 0px; }
+    }
+  </style>
+
+  <!-- Container -->
+  <rect x="2" y="2" width="876" height="336" rx="20" fill="url(#cardBg)" stroke="#247bff" stroke-opacity="0.3" stroke-width="1.5"/>
+  <rect x="2" y="2" width="876" height="336" rx="20" fill="url(#dotPattern2)"/>
+
+  <!-- Left Side: Engineering Capabilities -->
+  <g transform="translate(35, 30)">
+    <rect x="0" y="0" width="160" height="24" rx="6" fill="#0d162a" stroke="#247bff" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="10" y="16" font-family="monospace" font-size="11" font-weight="bold" fill="#00e5ff" letter-spacing="1.5">CAPABILITIES DOSSIER</text>
+
+    <text x="0" y="55" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="22" font-weight="900" fill="#ffffff">Engineering DNA</text>
+    <text x="0" y="75" font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8">Proven track record in autonomous systems &amp; client-side utilities.</text>
+
+    <!-- Skill Bar 1 -->
+    <g transform="translate(0, 95)">
+      <text x="0" y="0" font-family="monospace" font-size="12" font-weight="600" fill="#ffffff">Agentic AI &amp; LangGraph RAG</text>
+      <text x="375" y="0" font-family="monospace" font-size="11" fill="#00e5ff" text-anchor="end">PRODUCTION LEAD</text>
+      <rect x="0" y="8" width="375" height="7" rx="3.5" fill="#0d162a" stroke="#1e293b" stroke-width="1"/>
+      <rect x="0" y="8" width="360" height="7" rx="3.5" fill="url(#barGrad)"/>
+    </g>
+
+    <!-- Skill Bar 2 -->
+    <g transform="translate(0, 140)">
+      <text x="0" y="0" font-family="monospace" font-size="12" font-weight="600" fill="#ffffff">Client-Side WASM &amp; PDF/Image Engine</text>
+      <text x="375" y="0" font-family="monospace" font-size="11" fill="#10b981" text-anchor="end">ZERO-EGRESS</text>
+      <rect x="0" y="8" width="375" height="7" rx="3.5" fill="#0d162a" stroke="#1e293b" stroke-width="1"/>
+      <rect x="0" y="8" width="350" height="7" rx="3.5" fill="#10b981"/>
+    </g>
+
+    <!-- Skill Bar 3 -->
+    <g transform="translate(0, 185)">
+      <text x="0" y="0" font-family="monospace" font-size="12" font-weight="600" fill="#ffffff">Next.js 16, React 19 &amp; TypeScript</text>
+      <text x="375" y="0" font-family="monospace" font-size="11" fill="#38bdf8" text-anchor="end">HIGH-PERF SSR</text>
+      <rect x="0" y="8" width="375" height="7" rx="3.5" fill="#0d162a" stroke="#1e293b" stroke-width="1"/>
+      <rect x="0" y="8" width="365" height="7" rx="3.5" fill="#38bdf8"/>
+    </g>
+
+    <!-- Skill Bar 4 -->
+    <g transform="translate(0, 230)">
+      <text x="0" y="0" font-family="monospace" font-size="12" font-weight="600" fill="#ffffff">FastAPI, Qdrant Hybrid &amp; Postgres</text>
+      <text x="375" y="0" font-family="monospace" font-size="11" fill="#ff354f" text-anchor="end">&lt;35ms LATENCY</text>
+      <rect x="0" y="8" width="375" height="7" rx="3.5" fill="#0d162a" stroke="#1e293b" stroke-width="1"/>
+      <rect x="0" y="8" width="345" height="7" rx="3.5" fill="#ff354f"/>
+    </g>
+  </g>
+
+  <!-- Vertical Divider -->
+  <line x1="450" y1="30" x2="450" y2="310" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Right Side: 3-Slide Interests Carousel -->
+  <g transform="translate(480, 30)">
+    <rect x="0" y="0" width="140" height="24" rx="6" fill="#0d162a" stroke="#00e5ff" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="10" y="16" font-family="monospace" font-size="11" font-weight="bold" fill="#00e5ff" letter-spacing="1.5">PASSIONS // FOCUS</text>
+
+    <!-- SLIDE 1: Autonomous AI Systems -->
+    <g class="slide-1" transform="translate(0, 38)">
+      <rect x="0" y="0" width="365" height="190" rx="14" fill="url(#slide1Grad)" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1.5"/>
+      <text x="20" y="38" font-size="28">🧠</text>
+      <text x="60" y="38" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="800" fill="#ffffff">Autonomous AI &amp; RAG</text>
+      <text x="60" y="55" font-family="monospace" font-size="11" fill="#818cf8">NEXUSIQ COGNITIVE ORCHESTRATION</text>
+      <text x="20" y="90" font-family="-apple-system, sans-serif" font-size="12.5" fill="#cbd5e1">Engineering multi-agent graph workflows with LangGraph and Qdrant.</text>
+      <text x="20" y="112" font-family="-apple-system, sans-serif" font-size="12.5" fill="#cbd5e1">Dedicated to citation ground-truth validation &amp; zero hallucination.</text>
+      <rect x="20" y="140" width="90" height="22" rx="6" fill="#312e81"/>
+      <text x="28" y="155" font-family="monospace" font-size="10" font-weight="bold" fill="#c7d2fe">LangGraph</text>
+      <rect x="118" y="140" width="80" height="22" rx="6" fill="#312e81"/>
+      <text x="126" y="155" font-family="monospace" font-size="10" font-weight="bold" fill="#c7d2fe">Qdrant DB</text>
+    </g>
+
+    <!-- SLIDE 2: In-Browser Privacy Tools -->
+    <g class="slide-2" transform="translate(0, 38)">
+      <rect x="0" y="0" width="365" height="190" rx="14" fill="url(#slide2Grad)" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.5"/>
+      <text x="20" y="38" font-size="28">🔒</text>
+      <text x="60" y="38" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="800" fill="#ffffff">Privacy-First Engineering</text>
+      <text x="60" y="55" font-family="monospace" font-size="11" fill="#34d399">ZERO-EGRESS WASM CLIENT SUITES</text>
+      <text x="20" y="90" font-family="-apple-system, sans-serif" font-size="12.5" fill="#cbd5e1">Processing confidential documents 100% inside the browser.</text>
+      <text x="20" y="112" font-family="-apple-system, sans-serif" font-size="12.5" fill="#cbd5e1">Zero server uploads, zero leakage, raw WASM-level execution speed.</text>
+      <rect x="20" y="140" width="80" height="22" rx="6" fill="#064e3b"/>
+      <text x="28" y="155" font-family="monospace" font-size="10" font-weight="bold" fill="#a7f3d0">pdf-lib</text>
+      <rect x="108" y="140" width="90" height="22" rx="6" fill="#064e3b"/>
+      <text x="116" y="155" font-family="monospace" font-size="10" font-weight="bold" fill="#a7f3d0">HTML5 Canvas</text>
+    </g>
+
+    <!-- SLIDE 3: Modern Full-Stack Craft -->
+    <g class="slide-3" transform="translate(0, 38)">
+      <rect x="0" y="0" width="365" height="190" rx="14" fill="url(#slide3Grad)" stroke="#ff354f" stroke-opacity="0.4" stroke-width="1.5"/>
+      <text x="20" y="38" font-size="28">⚡</text>
+      <text x="60" y="38" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="800" fill="#ffffff">Scalable Cloud &amp; Web</text>
+      <text x="60" y="55" font-family="monospace" font-size="11" fill="#f87171">FULL-STACK PRODUCTION CRAFT</text>
+      <text x="20" y="90" font-family="-apple-system, sans-serif" font-size="12.5" fill="#cbd5e1">Building high-impact UI with React 19, Next.js 16 &amp; Tailwind v4.</text>
+      <text x="20" y="112" font-family="-apple-system, sans-serif" font-size="12.5" fill="#cbd5e1">Coupled with ultra-fast async backends written in FastAPI &amp; Python.</text>
+      <rect x="20" y="140" width="80" height="22" rx="6" fill="#7f1d1d"/>
+      <text x="28" y="155" font-family="monospace" font-size="10" font-weight="bold" fill="#fecaca">Next.js 16</text>
+      <rect x="108" y="140" width="70" height="22" rx="6" fill="#7f1d1d"/>
+      <text x="116" y="155" font-family="monospace" font-size="10" font-weight="bold" fill="#fecaca">FastAPI</text>
+    </g>
+
+    <!-- 3-Segment Progress Bar -->
+    <g transform="translate(0, 245)">
+      <!-- Segment 1 -->
+      <rect x="0" y="0" width="115" height="4" rx="2" fill="#1e293b"/>
+      <rect x="0" y="0" width="0" height="4" rx="2" fill="#6366f1" class="seg-1"/>
+
+      <!-- Segment 2 -->
+      <rect x="125" y="0" width="115" height="4" rx="2" fill="#1e293b"/>
+      <rect x="125" y="0" width="0" height="4" rx="2" fill="#10b981" class="seg-2"/>
+
+      <!-- Segment 3 -->
+      <rect x="250" y="0" width="115" height="4" rx="2" fill="#1e293b"/>
+      <rect x="250" y="0" width="0" height="4" rx="2" fill="#ff354f" class="seg-3"/>
+
+      <text x="0" y="24" font-family="monospace" font-size="10" fill="#64748b">AUTO-ROTATING // 4s CYCLE</text>
+      <text x="365" y="24" font-family="monospace" font-size="10" fill="#64748b" text-anchor="end">[SLIDES 1-3]</text>
+    </g>
+  </g>
+</svg>

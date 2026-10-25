@@ -1,0 +1,186 @@
+<svg width="880" height="360" viewBox="0 0 880 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="stackBg" x1="0" y1="0" x2="880" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#070b16"/>
+      <stop offset="50%" stop-color="#0a1224"/>
+      <stop offset="100%" stop-color="#070b16"/>
+    </linearGradient>
+    <linearGradient id="coreGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#247bff"/>
+      <stop offset="50%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#ff354f"/>
+    </linearGradient>
+    <pattern id="dotPattern3" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#00e5ff" fill-opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .orbit-1 { animation: spinOrbit1 25s linear infinite; transform-origin: 200px 180px; }
+    .orbit-2 { animation: spinOrbit2 18s linear infinite reverse; transform-origin: 200px 180px; }
+    .orbit-3 { animation: spinOrbit3 12s linear infinite; transform-origin: 200px 180px; }
+    
+    @keyframes spinOrbit1 { 100% { transform: rotate(360deg); } }
+    @keyframes spinOrbit2 { 100% { transform: rotate(360deg); } }
+    @keyframes spinOrbit3 { 100% { transform: rotate(360deg); } }
+    
+    .tech-pill {
+      transition: all 0.3s;
+    }
+  </style>
+
+  <!-- Container -->
+  <rect x="2" y="2" width="876" height="356" rx="20" fill="url(#stackBg)" stroke="#247bff" stroke-opacity="0.3" stroke-width="1.5"/>
+  <rect x="2" y="2" width="876" height="356" rx="20" fill="url(#dotPattern3)"/>
+
+  <!-- Left: 3 Tilted Elliptical Planetary Orbits -->
+  <g transform="translate(0, 0)">
+    <!-- Orbit 1 (Outer - 140x95) -->
+    <ellipse cx="200" cy="180" rx="145" ry="95" fill="none" stroke="#247bff" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="4 6" transform="rotate(-15 200 180)"/>
+    <!-- Orbit 2 (Middle - 105x70) -->
+    <ellipse cx="200" cy="180" rx="105" ry="70" fill="none" stroke="#00e5ff" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="3 5" transform="rotate(25 200 180)"/>
+    <!-- Orbit 3 (Inner - 65x45) -->
+    <ellipse cx="200" cy="180" rx="68" ry="45" fill="none" stroke="#ff354f" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="2 4" transform="rotate(-30 200 180)"/>
+
+    <!-- Central Core -->
+    <circle cx="200" cy="180" r="26" fill="#0d162a" stroke="url(#coreGlow)" stroke-width="2.5"/>
+    <text x="200" y="186" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">SK</text>
+
+    <!-- Orbit 1 Satellites (Next.js, FastAPI, PostgreSQL) -->
+    <g class="orbit-1">
+      <circle cx="55" cy="180" r="14" fill="#000000" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="55" y="184" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">N</text>
+      
+      <circle cx="345" cy="180" r="14" fill="#009688" stroke="#ffffff" stroke-width="1.5"/>
+      <text x="345" y="184" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">⚡</text>
+    </g>
+
+    <!-- Orbit 2 Satellites (LangGraph, React) -->
+    <g class="orbit-2">
+      <circle cx="200" cy="110" r="13" fill="#1c3c3c" stroke="#10b981" stroke-width="1.5"/>
+      <text x="200" y="114" font-family="sans-serif" font-size="9" font-weight="bold" fill="#10b981" text-anchor="middle">LG</text>
+      
+      <circle cx="200" cy="250" r="13" fill="#0f172a" stroke="#61dafb" stroke-width="1.5"/>
+      <text x="200" y="254" font-family="sans-serif" font-size="9" font-weight="bold" fill="#61dafb" text-anchor="middle">⚛</text>
+    </g>
+
+    <!-- Orbit 3 Satellites (Qdrant, WASM) -->
+    <g class="orbit-3">
+      <circle cx="140" cy="180" r="11" fill="#dc244c" stroke="#ffffff" stroke-width="1.5"/>
+      <text x="140" y="183" font-family="sans-serif" font-size="7" font-weight="bold" fill="#ffffff" text-anchor="middle">Q</text>
+
+      <circle cx="260" cy="180" r="11" fill="#654ff0" stroke="#ffffff" stroke-width="1.5"/>
+      <text x="260" y="183" font-family="sans-serif" font-size="7" font-weight="bold" fill="#ffffff" text-anchor="middle">W</text>
+    </g>
+
+    <text x="200" y="325" font-family="monospace" font-size="10" fill="#64748b" text-anchor="middle">ORBITAL SYSTEM // 3-TIER ENGINE</text>
+  </g>
+
+  <!-- Right: Grouped Stack Chips (4 Columns/Categories) -->
+  <g transform="translate(390, 28)">
+    <rect x="0" y="0" width="180" height="24" rx="6" fill="#0d162a" stroke="#247bff" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="10" y="16" font-family="monospace" font-size="11" font-weight="bold" fill="#00e5ff" letter-spacing="1.5">PRODUCTION TECH STACK</text>
+    <text x="0" y="55" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="900" fill="#ffffff">Hardened Frameworks</text>
+
+    <!-- Column 1: AI / Agents -->
+    <g transform="translate(0, 75)">
+      <text x="0" y="0" font-family="monospace" font-size="11" font-weight="bold" fill="#818cf8">🧠 AI &amp; MULTI-AGENT</text>
+      <!-- Chips -->
+      <g transform="translate(0, 10)">
+        <rect x="0" y="0" width="110" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#c7d2fe">LangGraph</text>
+      </g>
+      <g transform="translate(0, 42)">
+        <rect x="0" y="0" width="110" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#c7d2fe">LangChain</text>
+      </g>
+      <g transform="translate(0, 74)">
+        <rect x="0" y="0" width="110" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#c7d2fe">Qdrant Vector</text>
+      </g>
+      <g transform="translate(0, 106)">
+        <rect x="0" y="0" width="110" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#c7d2fe">Hybrid Search</text>
+      </g>
+      <g transform="translate(0, 138)">
+        <rect x="0" y="0" width="110" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#c7d2fe">OpenAI / LLMs</text>
+      </g>
+    </g>
+
+    <!-- Column 2: Frontend & WASM -->
+    <g transform="translate(125, 75)">
+      <text x="0" y="0" font-family="monospace" font-size="11" font-weight="bold" fill="#38bdf8">⚛️ CLIENT &amp; WASM</text>
+      <g transform="translate(0, 10)">
+        <rect x="0" y="0" width="110" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#bae6fd">Next.js 16</text>
+      </g>
+      <g transform="translate(0, 42)">
+        <rect x="0" y="0" width="110" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#bae6fd">React 19</text>
+      </g>
+      <g transform="translate(0, 74)">
+        <rect x="0" y="0" width="110" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#bae6fd">TypeScript</text>
+      </g>
+      <g transform="translate(0, 106)">
+        <rect x="0" y="0" width="110" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#bae6fd">pdf-lib (WASM)</text>
+      </g>
+      <g transform="translate(0, 138)">
+        <rect x="0" y="0" width="110" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#bae6fd">HTML5 Canvas</text>
+      </g>
+    </g>
+
+    <!-- Column 3: Backend & Data -->
+    <g transform="translate(250, 75)">
+      <text x="0" y="0" font-family="monospace" font-size="11" font-weight="bold" fill="#34d399">⚙️ BACKEND &amp; DB</text>
+      <g transform="translate(0, 10)">
+        <rect x="0" y="0" width="105" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#a7f3d0">FastAPI</text>
+      </g>
+      <g transform="translate(0, 42)">
+        <rect x="0" y="0" width="105" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#a7f3d0">Python 3.12</text>
+      </g>
+      <g transform="translate(0, 74)">
+        <rect x="0" y="0" width="105" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#a7f3d0">PostgreSQL</text>
+      </g>
+      <g transform="translate(0, 106)">
+        <rect x="0" y="0" width="105" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#a7f3d0">Node.js</text>
+      </g>
+      <g transform="translate(0, 138)">
+        <rect x="0" y="0" width="105" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#a7f3d0">REST / SSE</text>
+      </g>
+    </g>
+
+    <!-- Column 4: Styling & Cloud -->
+    <g transform="translate(370, 75)">
+      <text x="0" y="0" font-family="monospace" font-size="11" font-weight="bold" fill="#f87171">🎨 UI &amp; DEVOPS</text>
+      <g transform="translate(0, 10)">
+        <rect x="0" y="0" width="95" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#fecaca">Tailwind v4</text>
+      </g>
+      <g transform="translate(0, 42)">
+        <rect x="0" y="0" width="95" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#fecaca">Three.js</text>
+      </g>
+      <g transform="translate(0, 74)">
+        <rect x="0" y="0" width="95" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#fecaca">Vercel</text>
+      </g>
+      <g transform="translate(0, 106)">
+        <rect x="0" y="0" width="95" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#fecaca">Git / CI/CD</text>
+      </g>
+      <g transform="translate(0, 138)">
+        <rect x="0" y="0" width="95" height="26" rx="6" fill="#0d162a" stroke="#1e293b"/>
+        <text x="10" y="17" font-family="monospace" font-size="11" fill="#fecaca">Docker</text>
+      </g>
+    </g>
+  </g>
+</svg>
